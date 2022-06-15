@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+  <head>
+    <title>IOT</title>
+    <style>
+      body {
+        font-size: 60%;
+        background: #00abb7;
+      }
+      .container {
+        padding: 50px;
+      }
+      button,
+      button::after {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      button {
+        background: none;
+        border: 4px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        display: block;
+        font-size: 1.6em;
+        font-weight: bold;
+        margin: 10px auto;
+        padding: 2em 6em;
+        position: relative;
+        text-transform: uppercase;
+      }
+      button::before,
+      button::after {
+        background: #fff;
+        content: '';
+        position: absolute;
+        z-index: -1;
+      }
+      button:hover {
+        color: #29f2e4;
+      }
+      .button1::after {
+        height: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .button1:hover:after {
+        height: 100%;
+      }
+      .button2::after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+      }
+      .button2:hover:after {
+        width: 100%;
+      }
+      .button3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+      }
+      .button3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .button4::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+      }
+      .button4:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+        <h1 style="color:black;font-size:40px;">ALMI & ROBOTICS LAB</h1>  
+        <h2 style="color:black;font-size:30px;">IOT SERVER</h2>  
+    <div class="container">   
+        <div class="login" >
+        <p style="color:brown;font-size:25px;">BULB</p> 
+        <form action="http://{{HTML_address}}:8080/LightON" method="post"> 
+            <button type="submit" onclick="document.body.style.backgroundColor = '#FFcccb'" class="button1">Light ON</button>
+        </form>
+
+        <form action="http://{{HTML_address}}:8080/LightOFF" method="post"> 
+            <button type="submit" onclick="document.body.style.backgroundColor = '#90ee90'" class="button2">Light OFF</button>
+        </form>
+      
+      <p style="color:brown;font-size:25px;">FAN</p> 
+      <form action="http://{{HTML_address}}:8080/FanON" method="post"> 
+        <button type="submit" onclick="document.body.style.backgroundColor = '#ADD8E6'" class="button3">Fan ON</button>
+        </form>
+      
+        <form action="http://{{HTML_address}}:8080/FanOFF" method="post"> 
+            <button type="submit" onclick="document.body.style.backgroundColor = '#C4A484'" class="button4">Fan OFF</button>
+        </form>
+      
+    </div>
+    </div>
+    </center>
+    
+        
+  </body>
+</html>
